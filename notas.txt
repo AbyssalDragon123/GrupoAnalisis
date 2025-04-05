@@ -1,3 +1,5 @@
 Primera Nota Carlos Orozco
 
-commit segunda vuelta
+commit segunda vuelta Jennifer
+
+commit tersera vuelta Wendy 
