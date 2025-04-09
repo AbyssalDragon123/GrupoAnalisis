@@ -2,10 +2,14 @@
 
 ## ✔️ Sistema de Ventas
 
-Este proyecto implementa un sistema de ventas en base a lo siguiente:
--Arquitectura Cliente-Servidor 
--Backend desarrollado en C# (.NET Core) 
--Frontend desarrollado en Java (Swing)
+Este proyecto es una aplicación de gestión de ventas desarrollada de la siguiente manera: 
+
+- Arquitectura Cliente-Servidor
+- Backend desarrollado en C# (.NET Core) -
+- Frontend desarrollado en Java (Swing)
+
+☑️ Objetivo 
+- Facilitar el control de productos, clientes, facturación y generación de reportes.
 
 ## 🧑‍💻 Tecnologías Utilizadas
 
