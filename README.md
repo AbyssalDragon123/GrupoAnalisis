@@ -2,14 +2,19 @@
 
 # Sistema de Ventas
 
-Este proyecto implementa un sistema de ventas utilizando arquitectura Cliente-Servidor 
-El backend está desarrollado en C# (.NET Core) y el frontend en Java (Swing).
+Este proyecto implementa un sistema de ventas utilizando en base a lo siguiente:
+arquitectura Cliente-Servidor 
+backend desarrollado en C# (.NET Core) 
+frontend desarrollado en Java (Swing).
 
 ## Tecnologías Utilizadas
 
 - Backend: C# (.NET Core )
+- 	Microsofto Visual Estudio 2022
 - Frontend: Java (Swing)
-- Base de Datos: SQL Server
+- Base de Datos:
+- 	SQL Server
+- 	SQL Server managment Studio 
 - Arquitectura: Cliente-Servidor con APIs RESTful
 
 ## Funcionalidades
@@ -29,7 +34,9 @@ El backend está desarrollado en C# (.NET Core) y el frontend en Java (Swing).
 	
 	##frontend
 	
-	
+
+
+ 
 	##database
 
 
