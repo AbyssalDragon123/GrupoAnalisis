@@ -1,38 +1,41 @@
 -- Se crea la base de datos
 --Ejecutar esta linea primero
-CREATE DATABASE SistemaVentas;
+
+--usar Snake case
+CREATE DATABASE sistema_ventas;
 GO
 
 
 -- Seleccionar la base de datos para crear tablas
-USE SistemaVentas;
+USE sistemaventas;
 GO
 
 -- Tabla: Productos
-CREATE TABLE Productos (
+CREATE TABLE productos (
     id_producto INT IDENTITY(1,1) PRIMARY KEY,
-    Fecha_ingreso DATETIME,
-    Nombre_producto VARCHAR(45) NOT NULL,
-    Categoria VARCHAR(20) NOT NULL,
+    fecha_ingreso DATETIME,
+    nombre_producto VARCHAR(45) NOT NULL,
+    categoria VARCHAR(20) NOT NULL,
     precio_unitario DECIMAL(10,2),
-    Stock INT NOT NULL,
-    Descripcion VARCHAR(250),
-    Activo BIT NOT NULL DEFAULT 1 --muestra el estado del producto activo o inactivo
+    stock INT NOT NULL,
+    descripcion VARCHAR(250),
+    activo BIT NOT NULL DEFAULT 1 --muestra el estado del producto activo o inactivo
 );
 GO
 
 -- Tabla: Clientes
-CREATE TABLE Clientes (
-    id_cliente INT IDENTITY(1,1) PRIMARY KEY,
-    Nombre VARCHAR(100) NOT NULL,
-    Direccion VARCHAR(150),
-    Telefono VARCHAR(20),
-    Correo VARCHAR(100)
+CREATE TABLE clientes (
+    id_cliente INT IDENTITY(1,1) PRIMARY KEY, --llave primaria, (autoincrentable 1++)
+    nombre VARCHAR(50) NOT NULL,
+    apellido varchar(50),
+    direccion VARCHAR(150),
+    telefono VARCHAR(20),
+    correo VARCHAR(100)
 );
 GO
 
 -- Tabla: Usuarios
-CREATE TABLE Usuarios (
+CREATE TABLE usuarios (
     id_usuario INT IDENTITY(1,1) PRIMARY KEY,
     nombre_usuario VARCHAR(50) NOT NULL,
     contrasena VARCHAR(100) NOT NULL,
@@ -41,7 +44,7 @@ CREATE TABLE Usuarios (
 GO
 
 -- Tabla: Ventas
-CREATE TABLE Ventas (
+CREATE TABLE ventas (
     id_venta INT IDENTITY(1,1) PRIMARY KEY,
     id_cliente INT NOT NULL,
     id_usuario INT NOT NULL,
@@ -56,7 +59,7 @@ CREATE TABLE Ventas (
 GO
 
 -- Tabla: DetalleVenta
-CREATE TABLE DetalleVenta (
+CREATE TABLE detalleVenta (
     id_detalle INT IDENTITY(1,1) PRIMARY KEY,
     id_venta INT NOT NULL,
     id_producto INT NOT NULL,
@@ -70,7 +73,7 @@ CREATE TABLE DetalleVenta (
 GO
 
 -- Tabla: Estado
-CREATE TABLE Estado (
+CREATE TABLE estado (
     id_estado INT IDENTITY(1,1) PRIMARY KEY,
     nombre_estado VARCHAR(20) NOT NULL
 );
@@ -88,8 +91,8 @@ INSERT INTO Estado (nombre_estado) VALUES
 GO
 
 -- Tabla: Roles
-CREATE TABLE Roles (
-    id_Rol INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE roles (
+    id_rol INT IDENTITY(1,1) PRIMARY KEY,
     nombre_rol VARCHAR(20)
 );
 GO
